@@ -1,0 +1,42 @@
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 997;
+    width: 100%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    margin: auto;
+    max-width: 1920px;
+    transition: all ease-in-out 0.2s;
+    visibility: hidden;
+    background-color: #1c1c1c;
+    .load{
+        @include center;
+        margin: auto;
+        width: 150px;
+        height: 30px;
+        &::after{
+            animation: load 1s  infinite;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 0%;
+            height: 100%;
+            background-color: rgb(16, 110, 218);
+        }
+    }
+    &.show{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes load {
+    0% {width: 0%; opacity: 0.3;}
+    100% {width: 100%; opacity: 1;}
+}

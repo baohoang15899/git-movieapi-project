@@ -1,0 +1,13 @@
+.footer{
+    text-align: center;
+    background-color: #fffcfb;
+    font-weight: 400;
+    padding: 20px 0px;
+    position: relative;
+    span{
+        text-transform: uppercase;
+        @include font($black,12px,normal);
+        font-family: $font-roboto;
+        font-weight: 600;
+    }
+}

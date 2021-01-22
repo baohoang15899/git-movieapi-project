@@ -1,0 +1,19 @@
+.banner{
+    background-image: url("../img/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    &__content{
+        padding: 216px 96px;
+        h3{
+            font-family: $font-roboto;
+            @include font($white,45px,normal);
+            &:nth-child(2){
+                font-size: 55px;
+                margin: 60px 0px;
+            }
+            &:nth-child(3){
+                font-size: 65px;
+            }
+        }
+    }
+}

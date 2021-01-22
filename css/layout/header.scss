@@ -1,0 +1,141 @@
+.header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    border-bottom: 3px solid #e5e5e5;
+    margin: auto;
+    max-width: 1920px;
+    z-index: 999;
+    transition: all ease-in-out 0.2s;
+    background-color: #fffcfb;
+    &__leftSide{
+        display: flex;
+        align-items: center;
+        @include max-breakpoint(1000){
+            flex-basis: 100%;
+            justify-content: space-between;
+        }
+        @include max-breakpoint(400){
+            flex-wrap: wrap;
+        }
+    }
+    &__rightSide{
+        display: flex;
+        align-items: center;
+        @include max-breakpoint(1000){
+            flex-basis: 100%;
+            margin-top: 20px;
+            form{
+                width: 100%;
+            }
+        }
+    }
+    &__content{
+        transition: all ease-in-out 0.4s;
+        padding: 20px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-input{
+            padding: 5px 20px;
+            outline: none;
+            border-radius: 16px;
+            border: none;
+            margin-right: 5px;
+            border: 2px solid $black;
+            @include max-breakpoint(1000){
+                    width: 95%;
+                
+            }
+        }
+        &-btn{
+            text-transform: uppercase;
+            @include font($black,14px,normal);
+            font-family:$font-roboto;
+            font-weight: 400;
+            outline: none;
+            border: none;
+            border-radius: 16px;
+            background-color: rgb(70, 66, 66);
+            color: rgb(241, 236, 236);
+            padding: 7px 15px;
+            transition: all ease-in-out 0.2s;
+            &:focus{
+                border-radius: 4px;
+                box-shadow: 0px 0px 0px 2px rgb(67, 68, 67);
+            }
+        }
+        &-logo{
+            margin-right: 20px;
+            text-transform: uppercase;
+            font-family: $font-roboto;
+            font-weight: 500;
+            @include font($black,26px,normal);
+        }
+        &-menu{
+            margin-left: 50px;
+            display: flex;
+            @include max-breakpoint(400){
+                margin-left: initial;
+            }
+        }
+        &-item{
+            margin-left: 20px;
+            &:nth-child(1){
+                margin-left: 0px
+            }
+            .getMovie{
+                position: relative;
+                &::after{
+                    transition: all ease-in-out 0.4s;
+                    content: "";
+                    background-color: $blue;
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 0%;
+                    height: 3px;
+                }
+                &.show{
+                    &::after{
+                        content: "";
+                        background-color: $blue;
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        width: 100%;
+                        height: 3px;
+                    }
+                    color: $blue;
+                }
+            }
+            @include max-breakpoint(337){
+                margin-top: 15px;
+            }
+
+        }
+        &-link{
+            @include font($black,16px,normal);
+            font-family: $font-roboto;
+            font-weight: 500;
+            transition: all ease-in-out 0.2s;
+            position: relative;
+            &:hover{
+                color: $blue;
+            }
+        }
+        &.show{
+            padding: 15px 0px;
+        }
+        @include max-breakpoint(1000){
+            flex-wrap: wrap;
+            &-logo{
+                font-size: 20px;
+            }
+            &-link{
+                font-size: 14px;
+            }
+        }
+    }
+
+}

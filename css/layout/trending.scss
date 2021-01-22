@@ -1,0 +1,137 @@
+.trending{
+    position: relative;
+    &__content{
+        padding: 158px 0px;
+        @include max-breakpoint(337){
+            padding: 200px 0px;
+        }
+        .group{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .btn{
+                button{
+                    font-family: $font-roboto;
+                    @include font($black,16px,normal);
+                    background-color: transparent;
+                    outline: none;
+                    border: none;
+                }
+                .tv{
+                    border-radius: 16px;
+                    margin-right: 20px;
+                    padding: 5px 20px;
+                    transition: all ease-in-out 0.4s;
+                    position: relative;
+                    &.show{
+                        color: $white;
+                        background-color:rgb(29, 71, 134) ;
+                        // &::after{
+                        //     transition: all ease-in-out 0.4s;
+                        //     position: absolute;
+                        //     content:"";
+                        //     bottom: -10px;
+                        //     width: 100%;
+                        //     height: 4px;
+                        //     left: 0;
+                        //     background-color: rgb(24, 82, 170);
+                        // }
+                    }
+                }
+                .theater{
+                    padding: 5px 20px;
+                    transition: all ease-in-out 0.4s;
+                    border-radius: 16px;
+                    margin-right: 20px;
+                    position: relative;
+                    &.show{
+                        color: $white;
+                        background-color:rgb(29, 71, 134) ;
+                    }
+                }
+            }
+        }
+        &-title{
+            margin-bottom: 20px;
+            font-family: $font-ubuntu;
+            font-weight: 500;
+            @include font($white,22px,normal);
+            @include max-breakpoint(440){
+                margin: auto;
+            }
+        }
+        &-list{
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            column-gap: 40px;
+            row-gap:50px;
+            @include max-breakpoint(1200){
+                grid-template-columns: repeat(4,1fr);
+            }
+            @include max-breakpoint(1000){
+                grid-template-columns: repeat(4,1fr);
+            }
+            @include max-breakpoint(800){
+                grid-template-columns: repeat(3,1fr);
+            }
+            @include max-breakpoint(620){
+                grid-template-columns: repeat(2,1fr);
+            }
+            @include max-breakpoint(440){
+                column-gap: initial;
+                padding-left: 40px;
+                padding-right: 40px;
+                grid-template-columns: repeat(1,1fr);
+            }
+            @include max-breakpoint(400){
+                padding-left: 20px;
+                padding-right: 20px;
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+        &-detail{
+            transition: all ease-in-out 0.4s;
+            animation-duration: 1s;
+            animation-name:trans;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            border-radius: 8px;
+            cursor: pointer;
+            img{
+                border-radius: 8px;
+                height: 300px;
+            }
+            .circle{
+                width: 40px;
+                height: 40px;
+                background-color: rgb(44, 43, 43);
+                padding: 5px;
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                border-radius: 50%;
+                span{
+                    font-family: $font-roboto;
+                    @include font($green,12px,normal);
+                    padding: 5px;
+                    @include center;
+                }
+            }
+            .title{
+                font-weight: bold;
+                margin-top: 10px;
+            }
+            span{
+                font-family: $font-roboto;
+                @include font($white,14px,normal);
+            }
+        }
+    }
+}
+
+@keyframes trans {
+    from{opacity: 0.2;}
+    to{opacity: 1;}
+}

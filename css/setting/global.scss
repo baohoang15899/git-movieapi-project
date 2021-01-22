@@ -1,0 +1,79 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+img{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+body{
+    scroll-behavior: smooth;
+    background-color: #1c1c1c;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+    transition: all ease-in-out 0.2s;
+}
+button{
+    cursor: pointer;
+}
+body::-webkit-scrollbar {
+    width: 9px;               /* width of the entire scrollbar */
+  }
+  body::-webkit-scrollbar-track {
+    background: #cccccc;
+  }
+  
+
+  body::-webkit-scrollbar-thumb {
+    background: rgb(116, 114, 114);
+  }
+  
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  } 
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+li{
+    list-style: none;
+}
+p{
+    word-break: break-all;
+}
+hr{
+    color: rgb(20, 20, 20);
+}
+.container{
+    padding-left: 86px;
+    padding-right: 86px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+button{
+    cursor: pointer;
+}
+.wrapper{
+    max-width: 1920px;
+    margin: auto;
+}
+@media screen and (max-width: 1000px) {
+    .container{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+  }
+@media screen and (max-width: 614px) {
+    .container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+  }
